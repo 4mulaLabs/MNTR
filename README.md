@@ -7,6 +7,6 @@ This application has to aims:
 
 Basic Requirements
 ------------------
-Minimum SDK: API 24, Android 7.0 (Nougat)
-Gradle JDK: corretto-11: Amazon Corretto version 11.0.18
-Running Device: Pixel 6 API 24
+1) Minimum SDK: API 24, Android 7.0 (Nougat)
+2) Gradle JDK: corretto-11: Amazon Corretto version 11.0.18
+3) Running Device: Pixel 6 API 24
