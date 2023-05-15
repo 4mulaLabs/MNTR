@@ -11,7 +11,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.formulaLabs.mntr.databinding.AvailableNetworksBinding;
 
-public class SecondFragment extends Fragment {
+public class AvailableNetworks extends Fragment {
 
     private AvailableNetworksBinding binding;
 
@@ -32,8 +32,8 @@ public class SecondFragment extends Fragment {
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_MainPage);
+                NavHostFragment.findNavController(AvailableNetworks.this)
+                        .navigate(R.id.action_AvailableNetworks_to_MainPage);
             }
         });
     }

@@ -12,17 +12,17 @@
         tools:layout="@layout/main_page">
 
         <action
-            android:id="@+id/action_MainPage_to_SecondFragment"
+            android:id="@+id/action_MainPage_to_AvailableNetworks"
             app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.formulaLabs.mntr.SecondFragment"
+        android:name="com.formulaLabs.mntr.AvailableNetworks"
         android:label="@string/available_networks_label"
         tools:layout="@layout/available_networks">
 
         <action
-            android:id="@+id/action_SecondFragment_to_MainPage"
+            android:id="@+id/action_AvailableNetworks_to_MainPage"
             app:destination="@id/MainPage" />
     </fragment>
 </navigation>
