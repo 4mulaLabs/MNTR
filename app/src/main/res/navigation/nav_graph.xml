@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/MainPage">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.formulaLabs.mntr.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/MainPage"
+        android:name="com.formulaLabs.mntr.MainPage"
+        android:label="@string/mntr_label"
+        tools:layout="@layout/main_page">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_MainPage_to_AvailableNetworks"
             app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.formulaLabs.mntr.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:name="com.formulaLabs.mntr.AvailableNetworks"
+        android:label="@string/available_networks_label"
+        tools:layout="@layout/available_networks">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_AvailableNetworks_to_MainPage"
+            app:destination="@id/MainPage" />
     </fragment>
 </navigation>
