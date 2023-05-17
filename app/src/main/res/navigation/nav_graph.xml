@@ -13,10 +13,10 @@
 
         <action
             android:id="@+id/action_MainPage_to_AvailableNetworks"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/AvailableNetworks" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/AvailableNetworks"
         android:name="com.formulaLabs.mntr.AvailableNetworks"
         android:label="@string/available_networks_label"
         tools:layout="@layout/available_networks">
