@@ -4,9 +4,13 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.telephony.PhoneStateListener;
+import android.telephony.SubscriptionInfo;
+import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 
 import androidx.core.app.ActivityCompat;
+
+import java.util.List;
 
 public class NetworkInfo {
 
@@ -67,6 +71,33 @@ public class NetworkInfo {
                 return "5G";
             default:
                 return "Unknown";
+        }
+    }
+
+
+    private void getAvailableNetworkOperatorNames(Context context) {
+        // Check if the required permission is granted
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            // Permission not granted, handle accordingly
+            return;
+        }
+
+        TelephonyManager telephonyManager = context.getSystemService(TelephonyManager.class);
+        SubscriptionManager subscriptionManager = context.getSystemService(SubscriptionManager.class);
+
+        // Get a list of all available subscriptions
+        List<SubscriptionInfo> subscriptionInfoList = subscriptionManager.getActiveSubscriptionInfoList();
+
+        if (subscriptionInfoList != null) {
+            for (SubscriptionInfo subscriptionInfo : subscriptionInfoList) {
+                // Get the subscription ID
+                int subscriptionId = subscriptionInfo.getSubscriptionId();
+
+                // Get the operator name associated with the subscription
+                CharSequence operatorName = subscriptionInfo.getCarrierName();
+
+                // Process the operator name as needed
+            }
         }
     }
 }
