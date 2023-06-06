@@ -1,5 +1,6 @@
 package com.formulaLabs.mntr;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +29,9 @@ public class AvailableNetworks extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        Context context = getContext();
+        Operator currentOperator =  NetworkInfo.getCurrentOperator(context);
 
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
