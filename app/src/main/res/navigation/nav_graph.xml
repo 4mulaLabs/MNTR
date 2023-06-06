@@ -12,17 +12,17 @@
         tools:layout="@layout/main_page">
 
         <action
-            android:id="@+id/action_MainPage_to_AvailableNetworks"
-            app:destination="@id/AvailableNetworks" />
+            android:id="@+id/action_MainPage_to_CurrentNetwork"
+            app:destination="@id/CurrentNetwork" />
     </fragment>
     <fragment
-        android:id="@+id/AvailableNetworks"
-        android:name="com.formulaLabs.mntr.AvailableNetworks"
-        android:label="@string/available_networks_label"
-        tools:layout="@layout/available_networks">
+        android:id="@+id/CurrentNetwork"
+        android:name="com.formulaLabs.mntr.CurrentNetwork"
+        android:label="@string/current_network_label"
+        tools:layout="@layout/current_network">
 
         <action
-            android:id="@+id/action_AvailableNetworks_to_MainPage"
+            android:id="@+id/action_CurrentNetwork_to_MainPage"
             app:destination="@id/MainPage" />
     </fragment>
 </navigation>

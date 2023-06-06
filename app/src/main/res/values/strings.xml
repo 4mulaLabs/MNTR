@@ -3,10 +3,9 @@
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="mntr_label">MNTR</string>
-    <string name="available_networks_label">Available Networks</string>
-    <string name="available_networks">Available Networks</string>
+    <string name="current_network_label">Monitor</string>
+    <string name="current_network">Monitor</string>
     <string name="return1">Return</string>
 
-    <string name="please_choose_your_wish">Please choose your wish: </string>
-    <string name="current_available_networks">Here are the current available networks:</string>
+    <string name="choose_option">Please Choose an Option:</string>
 </resources>
