@@ -8,4 +8,5 @@
     <string name="return1">Return</string>
 
     <string name="choose_option">Please Choose an Option:</string>
+    <string name="connection_state" />
 </resources>
