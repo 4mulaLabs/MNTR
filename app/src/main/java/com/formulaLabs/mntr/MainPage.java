@@ -29,11 +29,11 @@ public class MainPage extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonAvailableNetworks.setOnClickListener(new View.OnClickListener() {
+        binding.buttonCurrentNetwork.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(MainPage.this)
-                        .navigate(R.id.action_MainPage_to_AvailableNetworks);
+                        .navigate(R.id.action_MainPage_to_CurrentNetwork);
             }
         });
     }

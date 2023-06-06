@@ -10,11 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.formulaLabs.mntr.databinding.AvailableNetworksBinding;
+import com.formulaLabs.mntr.databinding.CurrentNetworkBinding;
 
-public class AvailableNetworks extends Fragment {
+public class CurrentNetwork extends Fragment {
 
-    private AvailableNetworksBinding binding;
+    private CurrentNetworkBinding binding;
 
     @Override
     public View onCreateView(
@@ -22,7 +22,7 @@ public class AvailableNetworks extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = AvailableNetworksBinding.inflate(inflater, container, false);
+        binding = CurrentNetworkBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -36,8 +36,8 @@ public class AvailableNetworks extends Fragment {
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(AvailableNetworks.this)
-                        .navigate(R.id.action_AvailableNetworks_to_MainPage);
+                NavHostFragment.findNavController(CurrentNetwork.this)
+                        .navigate(R.id.action_CurrentNetwork_to_MainPage);
             }
         });
     }
