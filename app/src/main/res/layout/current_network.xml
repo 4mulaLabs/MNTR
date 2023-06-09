@@ -10,13 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="24dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        android:gravity="center">>
 
         <TextView
             android:id="@+id/textview_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/connection_state"
+            android:gravity="left"
             android:inputType="textMultiLine"
             app:layout_constraintBottom_toTopOf="@id/button_second"
             app:layout_constraintEnd_toEndOf="parent"
