@@ -7,10 +7,10 @@ import android.content.pm.PackageManager;
 import android.telephony.CellInfo;
 import android.telephony.CellSignalStrength;
 import android.telephony.TelephonyManager;
-
 import androidx.core.app.ActivityCompat;
 
 import java.util.List;
+import java.util.Map;
 
 public class NetworkInfo {
 
@@ -48,6 +48,9 @@ public class NetworkInfo {
                     if (Definitions.MccMncBrands.containsKey(operatorCode)) {
                         brandName = Definitions.MccMncBrands.get(operatorCode);
                     }
+                    if (Definitions.MccMncBrands.containsValue(operatorCode)) {
+                        operatorCode = getKeyByValue(Definitions.MccMncBrands, operatorCode);
+                    }
                     int signalStrengthDbm = signalStrength.getDbm();
                     operator.setBrandName(brandName);
                     operator.setOperatorCode(operatorCode);
@@ -58,5 +61,14 @@ public class NetworkInfo {
         }
 
         return operator;
+    }
+
+    public static <K, V> K getKeyByValue(Map<K, V> map, V value) {
+        for (Map.Entry<K, V> entry : map.entrySet()) {
+            if (value.equals(entry.getValue())) {
+                return entry.getKey();
+            }
+        }
+        return null; // Return null if value not found
     }
 }
