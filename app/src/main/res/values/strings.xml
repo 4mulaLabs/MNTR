@@ -4,9 +4,11 @@
     <!-- Strings used for fragments for navigation -->
     <string name="mntr_label">MNTR</string>
     <string name="current_network_label">Monitor</string>
+    <string name="available_networks_label">Available Networks</string>
     <string name="current_network">Monitor</string>
+    <string name="available_networks">Available Networks</string>
     <string name="return1">Return</string>
 
-    <string name="choose_option">Please Choose an Option:</string>
+    <string name="welcome_to_mntr">Welcome To: MNTR</string>
     <string name="connection_state" />
 </resources>

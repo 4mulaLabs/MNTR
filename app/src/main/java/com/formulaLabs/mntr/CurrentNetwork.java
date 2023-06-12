@@ -86,6 +86,7 @@ public class CurrentNetwork extends Fragment {
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                handler.removeCallbacks(runnable);
                 NavHostFragment.findNavController(CurrentNetwork.this)
                         .navigate(R.id.action_CurrentNetwork_to_MainPage);
             }
