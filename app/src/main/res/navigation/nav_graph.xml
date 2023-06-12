@@ -9,20 +9,36 @@
         android:id="@+id/MainPage"
         android:name="com.formulaLabs.mntr.MainPage"
         android:label="@string/mntr_label"
+        android:layout_alignParentStart="true"
         tools:layout="@layout/main_page">
 
         <action
             android:id="@+id/action_MainPage_to_CurrentNetwork"
             app:destination="@id/CurrentNetwork" />
+        <action
+            android:id="@+id/action_MainPage_to_AvailableNetworks"
+            app:destination="@id/AvailableNetworks" />
     </fragment>
     <fragment
         android:id="@+id/CurrentNetwork"
         android:name="com.formulaLabs.mntr.CurrentNetwork"
         android:label="@string/current_network_label"
+        android:layout_alignParentStart="true"
         tools:layout="@layout/current_network">
 
         <action
             android:id="@+id/action_CurrentNetwork_to_MainPage"
+            app:destination="@id/MainPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/AvailableNetworks"
+        android:name="com.formulaLabs.mntr.AvailableNetworks"
+        android:label="@string/available_networks_label"
+        android:layout_alignParentStart="true"
+        tools:layout="@layout/available_networks">
+
+        <action
+            android:id="@+id/action_AvailableNetworks_to_MainPage"
             app:destination="@id/MainPage" />
     </fragment>
 </navigation>
