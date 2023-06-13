@@ -14,8 +14,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MNTR"
-        tools:targetApi="30">
+        android:theme="@style/Theme.MNTR">
         <activity
             android:name=".MainActivity"
             android:exported="true"
