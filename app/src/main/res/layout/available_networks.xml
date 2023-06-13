@@ -36,6 +36,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_available_networks"
-        tools:ignore="NotSibling" />
+        app:layout_constraintTop_toBottomOf="@id/textview_available_networks" />
 </androidx.constraintlayout.widget.ConstraintLayout>
